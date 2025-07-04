@@ -13,6 +13,10 @@ app.use(cors());
 
 app.use('/api/auth',Auth);
 
+app.get('/', (req, res) => {
+    res.json({ message: 'Server is running' });
+});
+
 
 const PORT = process.env.PORT ; 
 const URI = process.env.MONGO_URI;
